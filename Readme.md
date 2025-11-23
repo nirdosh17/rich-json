@@ -22,6 +22,24 @@ A VS Code extension that formats and analyzes JSON files, showing errors and use
     ```
 - Press `F5` to open a new VS Code window with the extension loaded.
 
+## Installation
+This extension is not yet published to the VS Code Marketplace. You can install it by following the steps below:
+1. Clone the repository
+    ```bash
+    git clone https://github.com/nirdosh17/rich-json.git
+    ```
+2. Install dependencies
+    ```bash
+    npm install
+    ```
+3. Package the extension
+    ```bash
+    npm run package
+    ```
+    This will create a `.vsix` file in the root of the project. e.g. `rich-json-0.0.1.vsix`
+4. Install the extension from the `.vsix` file.
+    `CMD + Shift + P`(Mac) or `Ctrl+Shift+P`(Windows/Linux) -> `Extensions: Install from VSIX...` -> Select the `.vsix` file.
+
 ## Usage
 
 - Open any `.json` file.
