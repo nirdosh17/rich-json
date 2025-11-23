@@ -16,6 +16,16 @@
   "activationEvents": [
     "onLanguage:json"
   ],
+  "keywords": [
+    "json",
+    "viewer",
+    "formatter",
+    "analyzer",
+    "statistics",
+    "errors",
+    "pretty-json",
+    "json-viewer"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -55,8 +65,8 @@
     "@types/mocha": "^10.0.1",
     "@types/node": "20.2.5",
     "@types/vscode": "^1.80.0",
-    "@typescript-eslint/eslint-plugin": "^5.59.8",
-    "@typescript-eslint/parser": "^5.59.8",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
     "@vscode/test-electron": "^2.3.2",
     "@vscode/vsce": "^3.7.0",
     "eslint": "^8.41.0",
