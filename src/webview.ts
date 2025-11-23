@@ -90,7 +90,11 @@ function getWebviewContent(stats: AnalysisResult): string {
 }
 
 function formatSize(bytes: number): string {
-    if (bytes < 1024) return bytes + ' Bytes';
-    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
+    if (bytes < 1024) {
+        return bytes + ' Bytes';
+    }
+    if (bytes < 1024 * 1024) {
+        return (bytes / 1024).toFixed(2) + ' KB';
+    }
     return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
 }

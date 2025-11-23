@@ -20,7 +20,7 @@ export class JsonCodeLensProvider implements vscode.CodeLensProvider {
         const sizeDisplay = this.formatSize(sizeBytes);
         const topRange = new vscode.Range(0, 0, 0, 0);
         lenses.push(new vscode.CodeLens(topRange, {
-            title: `JSON Size: ${sizeDisplay}`,
+            title: `Size: ${sizeDisplay}`,
             command: '' // No command, just info
         }));
 
@@ -28,8 +28,12 @@ export class JsonCodeLensProvider implements vscode.CodeLensProvider {
     }
 
     private formatSize(bytes: number): string {
-        if (bytes < 1024) return bytes + ' B';
-        if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
+        if (bytes < 1024) {
+            return bytes + ' B';
+        }
+        if (bytes < 1024 * 1024) {
+            return (bytes / 1024).toFixed(2) + ' KB';
+        }
         return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
     }
 }
